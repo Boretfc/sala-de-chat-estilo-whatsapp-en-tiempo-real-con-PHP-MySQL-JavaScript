@@ -18,9 +18,9 @@ if (isset($_SESSION['email_user']) != "") {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
   <title>Chat - WhatApp - Login</title>
-  <link rel="stylesheet" href="assets/css/login.css">
-  <link rel="stylesheet" href="assets/css/loader.css">
-  <link rel="stylesheet" href="assets/css/picnic.min.css">
+  <link rel="stylesheet" href="<?php echo $URL; ?>/chat/assets/css/login.css">
+  <link rel="stylesheet" href="<?php echo $URL; ?>/chat/assets/css/loader.css">
+  <link rel="stylesheet" href="<?php echo $URL; ?>/chat/assets/css/picnic.min.css">
   <style type="text/css" media="screen">
     .miniprofile {
       border-radius: 50%;
@@ -42,7 +42,7 @@ if (isset($_SESSION['email_user']) != "") {
 
 <body>
   <section class="mi_wallper">
-    <img src="assets/img/fondo.jpg" alt="Imagen 100x100">
+    <img src="<?php echo $URL; ?>/chat/assets/img/fondo.jpg" alt="Imagen 100x100">
     <div id="demo-content">
       <div id="loader-wrapper">
         <div id="loader"></div>
@@ -54,12 +54,12 @@ if (isset($_SESSION['email_user']) != "") {
 
 
     <div class="login-box" id="login">
-      <img src="assets/img/favicon.png" class="avatar mb-4" alt="Avatar Image">
+      <img src="<?php echo $URL; ?>/chat/assets/img/favicon.png" class="avatar mb-4" alt="Avatar Image">
       <p style="text-align: center; font-weight:600">INICIAR SESIÓN AHORA!
         <hr>
       </p>
       <div id="espacio"></div>
-      <form class="form-login" action="acciones/process_login.php" method="POST" autocomplete="off">
+      <form class="form-login" action="acciones/process_login.php" method="POST" value="<?php echo $sesion_email?>">
         <div class="group">
           <input type="text" name="email_user" required>
           <span class="highlight"></span>
